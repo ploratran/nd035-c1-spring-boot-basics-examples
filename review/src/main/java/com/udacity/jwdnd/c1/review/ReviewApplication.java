@@ -16,30 +16,6 @@ public class ReviewApplication {
 		SpringApplication.run(ReviewApplication.class, args);
 	}
 
-	// Create a no-dependencies bean called "message"
-	// should be a string like "Hello, Spring!"
-	@Bean
-	public String message() {
-		System.out.println("Create message bean!");
-		return "Hello, Spring!";
-	}
-
-	// add a bean called "uppercaseMessage" that depends on MessageService
-	// should be a string that is the uppercase version of "message"
-	// take MessageService as dependency:
-	@Bean
-	public String uppercaseMessage(MessageService msgService) {
-		System.out.println("Create uppercaseMessage bean.");
-		return msgService.uppercase();
-	}
-
-	@Bean
-	// add a bean called "lowercaseMessage" that depends on MessageService
-	// should be a string that is the lowercase version of "message"
-	public String lowercaseMessage(MessageService msgService) {
-		System.out.println("Create lowercaseMessage bean.");
-		return msgService.lowercase();
-	}
 }
 
 //	@Primary
