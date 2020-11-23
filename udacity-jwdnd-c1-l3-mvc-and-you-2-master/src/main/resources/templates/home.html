@@ -9,6 +9,9 @@
 </head>
 <body>
 <!-- using model to dynamically use data in template -->
-<h1 th:each="msg: ${greetings}" th:text="${msg}">Hello, homepage!</h1>
+<h1 th:each="msg: ${greetings}"
+    th:text="${msg}"
+    th:unless="${msg.contains('Error')}"
+>Hello, homepage!</h1>
 </body>
 </html>
