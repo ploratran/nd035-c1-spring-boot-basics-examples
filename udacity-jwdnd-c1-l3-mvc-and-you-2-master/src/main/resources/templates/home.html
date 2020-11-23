@@ -8,7 +8,14 @@
     <title>Home</title>
 </head>
 <body>
-<!-- using model to dynamically use data in template -->
+
+<form th:object="${newMessage}" th:action="@{/home}" action="#" method="POST">
+
+    <input type="text" th:field="*{text}">
+    <input type="submit">
+</form>
+
+
 <h1 th:each="msg: ${greetings}"
     th:text="${msg}"
     th:unless="${msg.contains('Error')}"
