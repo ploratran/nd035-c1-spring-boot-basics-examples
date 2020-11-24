@@ -16,25 +16,27 @@ public class HomeController {
     private MessageListService messageListService;
 
     // constructor:
+    // declare MessageListService Component Dependency as parameter to
+    // Home Controller constructor:
     public HomeController(MessageListService messageListService) {
+
         this.messageListService = messageListService;
     }
 
-    //    @RequestMapping("/home")
 
     // Also respond to GET request:
     @GetMapping("/home")
     // add "model" parameter to Controller's method
-    public String getHomePage(@ModelAttribute("newMessage") MessageForm newMessage, Model model) {
-        // add attribute "welcomeMessage" to a map-like object model:
+    public String getHomePage(@ModelAttribute("newMessage") MessageForm messageForm, Model model) {
+        // add attribute "greetings" to a map-like object model:
         model.addAttribute("greetings", this.messageListService.getMessages());
         return "home";
     }
 
     @PostMapping("/home")
     public String addMessage(@ModelAttribute("newMessage") MessageForm messageForm, Model model) {
-        messageListService.addMessage(messageForm.getText());
-        model.addAttribute("greetings", messageListService.getMessages());
+        this.messageListService.addMessage(messageForm.getText());
+        model.addAttribute("greetings", this.messageListService.getMessages());
         messageForm.setText("");
         return "home";
     }
