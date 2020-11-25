@@ -17,7 +17,7 @@ public class MessageListService {
     }
 
     public void addMessage(String message) {
-        messages.add(message);
+        this.messages.add(message);
     }
 
     public List<String> getMessages() {

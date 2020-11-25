@@ -25,11 +25,10 @@ public class HomeController {
     }
 
     @PostMapping("/home")
-    public String addMessage(@ModelAttribute("newMessage") MessageForm messageForm, Model model) {
-        messageListService.addMessage(messageForm.getText());
-        model.addAttribute("greetings", messageListService.getMessages());
-        messageForm.setText("");
+    public String addMessage(@ModelAttribute("newMessage") MessageForm newMessage, Model model) {
+        this.messageListService.addMessage(newMessage.getText());
+        newMessage.setText("");
+        model.addAttribute("greetings", this.messageListService.getMessages());
         return "home";
     }
-
 }
