@@ -1,6 +1,7 @@
 package com.example.reviewexercise.model;
 
 // data type class for form fields
+// store form data
 public class ChatForm {
     private String username;
     private String text;

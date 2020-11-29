@@ -1,6 +1,7 @@
 package com.example.reviewexercise.model;
 
-// dat type class for message list's fields:
+// data type class for message list's fields
+// store a message with a username attached
 public class ChatMessage {
     private String username;
     private String message;
