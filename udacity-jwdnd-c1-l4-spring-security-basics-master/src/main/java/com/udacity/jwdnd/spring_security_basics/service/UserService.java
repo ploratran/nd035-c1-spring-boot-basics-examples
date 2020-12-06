@@ -12,9 +12,11 @@ import java.util.Base64;
 @Service
 public class UserService {
 
+    // fields:
     private final UserMapper userMapper;
     private final HashService hashService;
 
+    // constructor:
     public UserService(UserMapper userMapper, HashService hashService) {
         this.userMapper = userMapper;
         this.hashService = hashService;
@@ -25,11 +27,16 @@ public class UserService {
     }
 
     public int createUser(User user) {
+        // provides a cryptographically strong random number generator:
         SecureRandom random = new SecureRandom();
         byte[] salt = new byte[16];
+        // generate random salt value:
         random.nextBytes(salt);
+        // encode base65 of the salt so that HashService understands:
         String encodedSalt = Base64.getEncoder().encodeToString(salt);
+        // get hash value from user plain-text password with salt using HashService method:
         String hashedPassword = hashService.getHashedValue(user.getPassword(), encodedSalt);
+        // insert secured user credentials into User database:
         return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstName(), user.getLastName()));
     }
 

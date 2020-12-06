@@ -26,6 +26,7 @@ public class HashService {
             logger.error(e.getMessage());
         }
 
+        // return a string represented the hashed value:
         return Base64.getEncoder().encodeToString(hashedValue);
     }
 }

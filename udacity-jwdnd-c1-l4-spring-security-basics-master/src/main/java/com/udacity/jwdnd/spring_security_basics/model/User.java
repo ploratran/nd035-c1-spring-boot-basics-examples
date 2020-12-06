@@ -1,6 +1,7 @@
 package com.udacity.jwdnd.spring_security_basics.model;
 
 public class User {
+    // fields:
     private Integer userId;
     private String username;
     private String salt;
@@ -8,6 +9,7 @@ public class User {
     private String firstName;
     private String lastName;
 
+    // constructor:
     public User(Integer userId, String username, String salt, String password, String firstName, String lastName) {
         this.userId = userId;
         this.username = username;
