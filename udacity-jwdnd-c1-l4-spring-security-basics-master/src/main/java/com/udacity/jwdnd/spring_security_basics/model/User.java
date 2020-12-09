@@ -1,5 +1,6 @@
 package com.udacity.jwdnd.spring_security_basics.model;
 
+// Java class to match User database table:
 public class User {
     // fields:
     private Integer userId;

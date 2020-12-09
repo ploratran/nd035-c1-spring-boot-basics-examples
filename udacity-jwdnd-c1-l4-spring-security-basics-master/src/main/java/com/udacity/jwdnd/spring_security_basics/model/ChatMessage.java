@@ -1,20 +1,32 @@
 package com.udacity.jwdnd.spring_security_basics.model;
 
+// Java class to match MESSAGES database table:
 public class ChatMessage {
-    // fields:
-    // only need to add 1 single field:
-    private String messageText;
+    private int messageid;
+    private String username;
+    private String messagetext;
 
-    // constructor:
-    public ChatMessage(String messageText) {
-        this.messageText = messageText;
+    public int getMessageid() {
+        return messageid;
     }
 
-    public String getMessageText() {
-        return messageText;
+    public void setMessageid(int messageid) {
+        this.messageid = messageid;
     }
 
-    public void setMessageText(String messageText) {
-        this.messageText = messageText;
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getMessagetext() {
+        return messagetext;
+    }
+
+    public void setMessagetext(String messagetext) {
+        this.messagetext = messagetext;
     }
 }
