@@ -14,10 +14,13 @@ import java.util.Base64;
 
 @Service
 // implement Spring's Interface AuthenticationProvider:
+// AuthenticationProvider is an interface describing methods for checking user credentials:
+// AuthenticationService implements methods for checking user credentials:
 public class AuthenticationService implements AuthenticationProvider {
     private UserMapper userMapper;
     private HashService hashService;
 
+    // constructors:
     public AuthenticationService(UserMapper userMapper, HashService hashService) {
         this.userMapper = userMapper;
         this.hashService = hashService;

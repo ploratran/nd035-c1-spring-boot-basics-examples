@@ -22,6 +22,7 @@ public class UserService {
         this.hashService = hashService;
     }
 
+    // check to see if username already exist in database (if null):
     public boolean isUsernameAvailable(String username) {
         return userMapper.getUser(username) == null;
     }
@@ -40,6 +41,8 @@ public class UserService {
         return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstName(), user.getLastName()));
     }
 
+    // get a particular user by username using Mapper to query from database
+    // return User object:
     public User getUser(String username) {
         return userMapper.getUser(username);
     }

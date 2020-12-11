@@ -15,12 +15,13 @@ import org.springframework.security.core.AuthenticationException;
 
 import java.util.ArrayList;
 
-@Configuration
 // @Configuration: defines the source of configuration in Spring IoC
-@EnableWebSecurity
+@Configuration
 // @EnableWebSecurity lets Spring knows that it configures Spring Security
+@EnableWebSecurity
 
 // WebSecurityConfigureAdapter is an adapter for Spring's WebSecurityConfigure:
+// SecurityConfig implements methods that modify Spring's configuration to user other services:
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private AuthenticationService authenticationService;
@@ -35,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // take AuthenticationManagerBuilder class supplied by Spring:
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
-        // called method of the builder class
+        // called method of the AuthenticationManagerBuilder class
         // to configure parts of auth scheme to use
         // authenticationService to check user logins
         auth.authenticationProvider(this.authenticationService);
@@ -50,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // .authorizeRequests(): specifies which requests to authorize and how
         // .antMatchers(): match requests against URLs accessible to all users
-        // .permitAll(): allow all requests to URLs without auth
+        // .permitAll(): allow all requests to URLs without auth to /signup, /css, /js
         // .anyRequest(): match any requests that are NOT match with first call
         // .authenticated(): authenticate any requests that have NOT been matched
         http.authorizeRequests()
@@ -64,9 +65,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .permitAll();
 
-        // add a default redirect on successful login to /home URL
+        // add a default redirect on successful login to /chat URL
         // help users to not manually type url when successfully login
         http.formLogin()
-                .defaultSuccessUrl("/home", true);
+                .defaultSuccessUrl("/chat", true);
     }
 }

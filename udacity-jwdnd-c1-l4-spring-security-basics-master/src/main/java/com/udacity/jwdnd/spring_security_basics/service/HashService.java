@@ -12,6 +12,7 @@ import java.security.spec.KeySpec;
 import java.util.Base64;
 
 @Component
+// HashService implements method for encrypting secret data (the password):
 public class HashService {
     private Logger logger = LoggerFactory.getLogger(HashService.class);
 
