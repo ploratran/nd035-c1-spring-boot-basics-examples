@@ -63,7 +63,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // .permitAll(): accessible by anyone to the /login
         http.formLogin()
                 .loginPage("/login")
-                .permitAll();
+                .permitAll()
+                .and()
+                .logout()
+                    .deleteCookies("remove")
+                    .logoutSuccessUrl("/login");
 
         // add a default redirect on successful login to /chat URL
         // help users to not manually type url when successfully login

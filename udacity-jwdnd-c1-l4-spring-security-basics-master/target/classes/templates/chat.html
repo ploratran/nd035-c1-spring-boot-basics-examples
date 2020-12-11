@@ -23,6 +23,10 @@
     </select>
     <input type="submit">
 </form>
+
+<a href="/login">
+    <button>Logout</button>
+</a>
 <div th:each="chatMessage : ${chatMessages}">
     <span th:text="${chatMessage.username}">Username</span> : <span th:text="${chatMessage.messageText}">Hello</span>
 </div>
