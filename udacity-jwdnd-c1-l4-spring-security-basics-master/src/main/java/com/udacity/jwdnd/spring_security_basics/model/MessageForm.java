@@ -1,5 +1,6 @@
 package com.udacity.jwdnd.spring_security_basics.model;
 
+// Java class for chat view:
 public class MessageForm {
     // fields:
     private String username;
