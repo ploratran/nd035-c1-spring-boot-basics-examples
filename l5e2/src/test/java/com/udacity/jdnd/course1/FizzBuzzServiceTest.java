@@ -8,6 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class FizzBuzzServiceTest {
+	@Test
+	void testInvalidBuzzFizzResult() {
+		FizzBuzzService fbs = new FizzBuzzService();
+
+		assertThrows(IllegalArgumentException.class, () -> fbs.buzzFizz("Test", 1));
+		assertThrows(NumberFormatException.class, () -> fbs.buzzFizz("buzz", 2));
+	}
 
 	@Test
 	void testBuzzFizz() {
