@@ -23,7 +23,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7806286-03e9-4747-b6c8-2172befcc082" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../l5e2/src/test/java/com/udacity/jdnd/course1/FizzBuzzServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../l5e2/src/test/java/com/udacity/jdnd/course1/FizzBuzzServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/udacity/jwdnd/c1/review/controller/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/ReviewApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/ReviewApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/ChatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/controller/SignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/mapper/MessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/mapper/MessageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/ChatForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/ChatForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/ChatMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/ChatMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/HashService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/HashService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/udacity/jwdnd/c1/review/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/ReviewApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/udacity/jwdnd/c1/review/ReviewApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l5-junit-in-situ-master/L5_JUnit_in_Situ.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l5-selenium-webdriver-master/src/main/java/SeleniumExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l5-selenium-webdriver-master/src/main/java/SeleniumExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +56,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1kfS9rcVsI0J1eAHKyDFzQW6I9r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,6 +64,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.c1.review.ReviewApplication" />
+      <module name="review" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,6 +89,9 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -70,5 +102,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

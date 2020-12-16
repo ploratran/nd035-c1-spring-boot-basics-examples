@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70aa9ab8-555c-4f31-b6f8-7966af067b90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../l5e2/src/test/java/com/udacity/jdnd/course1/FizzBuzzServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../l5e2/src/test/java/com/udacity/jdnd/course1/FizzBuzzServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/java/com/udacity/jwdnd/c1/review/controller/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/ReviewApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/ReviewApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/ChatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/controller/SignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/mapper/MessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/mapper/MessageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/ChatForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/ChatForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/ChatMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/ChatMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/HashService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/HashService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/classes/com/udacity/jwdnd/c1/review/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/test-classes/com/udacity/jwdnd/c1/review/ReviewApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../udacity-jwdnd-c1-l4-final-review-solution-master/target/test-classes/com/udacity/jwdnd/c1/review/ReviewApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L5_Testing_with_JUnit.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lhqTkuEOzUvjtcBO65FkMmFbw1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70aa9ab8-555c-4f31-b6f8-7966af067b90" name="Default Changelist" comment="" />
+      <created>1608059681409</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608059681409</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

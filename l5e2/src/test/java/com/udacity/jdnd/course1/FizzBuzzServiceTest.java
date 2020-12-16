@@ -8,12 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class FizzBuzzServiceTest {
+
 	@Test
 	void testInvalidBuzzFizzResult() {
 		FizzBuzzService fbs = new FizzBuzzService();
 
+		// check when input is invalid, other than Fizz, Buzz or FizzBuzz:
 		assertThrows(IllegalArgumentException.class, () -> fbs.buzzFizz("Test", 1));
+		// check when input is non-capitalize first character:
 		assertThrows(NumberFormatException.class, () -> fbs.buzzFizz("buzz", 2));
+
+		// check when there are 2nd+ occurrence of
+
 	}
 
 	@Test
@@ -35,6 +41,11 @@ class FizzBuzzServiceTest {
 		// check when input is "FizzBuzz":
 		assertEquals(15, fbs.buzzFizz("FizzBuzz", 1));
 		assertEquals(30, fbs.buzzFizz("FizzBuzz", 2));
+
+		// check when invalid input, return -1:
+		assertEquals(-1, fbs.buzzFizz("-1", 1));
+
+		assertEquals(0, fbs.buzzFizz("Fizz", 0));
 	}
 
 	@Test

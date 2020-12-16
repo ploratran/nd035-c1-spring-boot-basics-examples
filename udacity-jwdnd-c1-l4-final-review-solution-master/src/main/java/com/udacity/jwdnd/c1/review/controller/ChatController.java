@@ -40,7 +40,5 @@ public class ChatController {
     public String[] allMessageTypes () {
         return new String[] { "Say", "Shout", "Whisper" };
     }
-    
-
 }
 
