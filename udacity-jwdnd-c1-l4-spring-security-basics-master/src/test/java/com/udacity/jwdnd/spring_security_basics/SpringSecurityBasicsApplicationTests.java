@@ -15,7 +15,7 @@ class SpringSecurityBasicsApplicationTests {
     @LocalServerPort
     private Integer port; // this port is the RANDOM_PORT
 
-    // intialize driver:
+    // initialize driver:
     private static WebDriver driver;
 
     // initialize each Page Object instances:
