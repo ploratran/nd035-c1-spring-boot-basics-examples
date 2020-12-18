@@ -11,6 +11,7 @@
 <form action="#" th:object="${messageForm}" method="POST" th:action="@{'/chat'}">
     <label for="newMessageText">Submit a new message: </label>
     <input type="text" id="newMessageText" name="newMessageText" th:field="*{messageText}">
+
     <label>Message Type: </label>
     <select id="messageType" th:field="*{messageType}">
         <option
@@ -21,14 +22,15 @@
             Say
         </option>
     </select>
-    <input type="submit">
+    <input id="submitMessage" type="submit" >
 </form>
 
 <a href="/login">
     <button>Logout</button>
 </a>
 <div th:each="chatMessage : ${chatMessages}">
-    <span th:text="${chatMessage.username}">Username</span> : <span th:text="${chatMessage.messageText}">Hello</span>
+    <span class="chatMessageUsername" th:text="${chatMessage.username}">Username</span>
+        : <span class="chatMessageText" th:text="${chatMessage.messageText}">Hello</span>
 </div>
 </body>
 </html>

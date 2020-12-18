@@ -24,7 +24,7 @@ public class LoginPage {
     }
 
     // define helper method to fill in information:
-    public void submitLogin(String username, String password) {
+    public void login(String username, String password) {
         // use .sendKeys() to submit information:
         this.username.sendKeys(username);
         this.password.sendKeys(password);

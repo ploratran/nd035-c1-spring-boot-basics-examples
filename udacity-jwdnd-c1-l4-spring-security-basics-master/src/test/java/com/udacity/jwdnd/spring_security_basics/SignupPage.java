@@ -30,7 +30,7 @@ public class SignupPage {
 
     // define helper methods:
     // to sign up user information, then click submit:
-    public void submitSignup(String firstName, String lastName, String username, String password) {
+    public void signup(String firstName, String lastName, String username, String password) {
         // use .sendKeys() to field in input field:
         this.firstName.sendKeys(firstName);
         this.lastName.sendKeys(lastName);
