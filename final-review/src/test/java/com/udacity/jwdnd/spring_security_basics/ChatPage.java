@@ -25,7 +25,9 @@ public class ChatPage {
     @FindBy(className = "chatMessageText")
     private WebElement chatText;
 
-    // define constructor:
+    // declare constructor with WebDriver as constructor argument:
+    // helps to whenever we create new ChatPage object, Selenium will automatically
+    // find and capture elements we declare:
     public ChatPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

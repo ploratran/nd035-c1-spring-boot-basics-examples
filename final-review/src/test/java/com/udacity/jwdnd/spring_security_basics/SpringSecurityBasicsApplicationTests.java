@@ -14,7 +14,9 @@ import org.springframework.boot.web.server.LocalServerPort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// define Spring Boot test with random port:
+// make sure the server is running before the tests start:
+// tells JUnit to run the app before any tests are executed,
+// with RANDOM_PORT number belongs to server port:
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class SpringSecurityBasicsApplicationTests {
 
@@ -32,13 +34,14 @@ class SpringSecurityBasicsApplicationTests {
     private ChatPage chatPg;
 
     // before all tests, setup Chrome as Web Driver:
+    // set up Selenium driver:
     @BeforeAll
     public static void beforeAll() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
-    // after all tests, quite driver:
+    // after all tests, Selenium quit driver:
     @AfterAll
     public static void afterAll() {
         driver.quit();
@@ -65,21 +68,21 @@ class SpringSecurityBasicsApplicationTests {
         driver.get(baseURL + "/signup");
 
         // call .signup() on SignupPage to submit information:
-        SignupPage signupPage = new SignupPage(driver);
-        signupPage.signup(firstName, lastName, username, password);
+        signupPg = new SignupPage(driver);
+        signupPg.signup(firstName, lastName, username, password);
 
         // navigate to /login:
         driver.get(baseURL + "/login");
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login(username, password);
+        loginPg = new LoginPage(driver);
+        loginPg.login(username, password);
 
         // after login success, auto navigate to /chat
         // no need to use driver.get(/chat):
-        ChatPage chatPage = new ChatPage(driver);
-        chatPage.submitMessage(message);
+        chatPg = new ChatPage(driver);
+        chatPg.submitMessage(message);
 
         // use ChatMessage class in View to get message:
-        ChatMessage result = chatPage.getMessage();
+        ChatMessage result = chatPg.getMessage();
 
         // use JUnit to test if result match:
         assertEquals(username, result.getUsername());

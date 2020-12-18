@@ -18,7 +18,9 @@ public class LoginPage {
     @FindBy(id = "submit-button")
     private WebElement submitBtn;
 
-    // define constructor:
+    // declare constructor with WebDriver as constructor argument:
+    // helps to whenever we create new Login object, Selenium will automatically
+    // find and capture elements we declare:
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

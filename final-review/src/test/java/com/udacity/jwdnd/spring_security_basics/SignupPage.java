@@ -23,7 +23,9 @@ public class SignupPage {
     @FindBy(id = "submit-button")
     private WebElement submitBtn;
 
-    // constructor:
+    // declare constructor with WebDriver as constructor argument:
+    // helps to whenever we create new Signup object, Selenium will automatically
+    // find and capture elements we declare:
     public SignupPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
