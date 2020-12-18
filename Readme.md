@@ -14,6 +14,8 @@ The lesson and exercise numbers start from 0, just like it does in array-indexes
 1. The `udacity-jwdnd-c1-snippets-master` directory contains the code snippets demonstrated in the classroom. 
 
 
+### Follow this link for [Course 1 Project](https://github.com/ploratran/nd035-c1-spring-boot-basics-project-starter): 
+
 Below is the mapping of folders in the current repository versus the classroom pages:
 
 |Lesson| Classroom page name|Mapped folder in the current repository|
