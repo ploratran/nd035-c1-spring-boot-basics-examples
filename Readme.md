@@ -5,6 +5,8 @@ This repository contains the following for the
 2. Corresponding solutions, and 
 3. The code snippets demonstrated in the classroom
 
+### Follow this link for [Project 1 Submission](https://github.com/ploratran/SuperDuperDrive): 
+
 ### Lesson and Exercise Naming Conventions
 The lesson and exercise numbers start from 0, just like it does in array-indexes. For example:
 1. The exercise solution directory named `udacity-jwdnd-c1-l1-final-review-solution-master` is associated with the **final-review** exercise present in course 2, lesson 2 in the classroom. 
@@ -13,8 +15,6 @@ The lesson and exercise numbers start from 0, just like it does in array-indexes
 
 1. The `udacity-jwdnd-c1-snippets-master` directory contains the code snippets demonstrated in the classroom. 
 
-
-### Follow this link for [Course 1 Project](https://github.com/ploratran/nd035-c1-spring-boot-basics-project-starter): 
 
 Below is the mapping of folders in the current repository versus the classroom pages:
 
