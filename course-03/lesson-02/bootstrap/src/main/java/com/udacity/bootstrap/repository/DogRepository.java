@@ -1,5 +1,6 @@
 package com.udacity.bootstrap.repository;
 
+import com.udacity.bootstrap.entity.Dog;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
@@ -12,16 +13,23 @@ import java.util.List;
  * reduce boilerplate codes to implement data access layer for H2 DB
  * */
 // an interface that extends Spring Crud API.
-//
-public interface DogRepository extends CrudRepository<String, Integer> {
-    // query data for retrieveDogBreed():
+// CrudRepository<Dog, Long>
+    // Dog: class name to create the Repository
+    // Integer: data type of the primary key of the Repository class (Dog class)
+public interface DogRepository extends CrudRepository<Dog, Integer> {
+
+
+    // NOTE: don't need to implement .findAll()
+
+    // find a dog by breed:
     @Query("select d.id, d.breed from Dog d")
-    List<String> findAllBreed();
+    List<String> findDogBreeds();
 
-    // query data for retrieveDogBreedById():
+    // find a dog by its id:
     @Query("select d.id, d.breed from Dog d where d.id=:id")
-    String findDogBreedById(Long id);
+    String findDogById(int id);
 
+    // find all dog names:
     @Query("select d.id, d.name from Dog d")
     List<String> findDogNames();
 }

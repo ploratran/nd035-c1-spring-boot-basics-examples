@@ -5,15 +5,16 @@ import com.udacity.bootstrap.entity.Dog;
 import java.util.List;
 
 public interface DogService {
+
     // retrieve all dogs:
     List<Dog> retrieveDogs();
 
-    // retrieve list of dog breed:
-    List<String> retrieveDogBreed();
+    // retrieve a dog breed:
+    List<Dog> retrieveDogBreed();
 
-    // retrieve a particular dog by its id:
-    String retrieveDogBreedById(Long id);
+    // retrieve a dog breed by its id:
+    String retrieveDogBreedById();
 
-    // retrieve a list of dog name:
-    List<String> retrieveDogNames();
+    // retrieve all dog names:
+    List<Dog> retrieveDogNames();
 }
