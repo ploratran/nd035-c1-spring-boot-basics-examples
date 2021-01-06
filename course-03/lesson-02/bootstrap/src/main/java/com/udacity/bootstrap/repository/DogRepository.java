@@ -11,13 +11,13 @@ import java.util.List;
  * CrudRepository<T,T>: use Spring Data JPA Repository,
  * to auto create simple queries behind the scene using method names
  * reduce boilerplate codes to implement data access layer for H2 DB
+ * This is only an INTERFACE, which means Spring implements method on the fly
  * */
 // an interface that extends Spring Crud API.
 // CrudRepository<Dog, Long>
     // Dog: class name to create the Repository
     // Integer: data type of the primary key of the Repository class (Dog class)
 public interface DogRepository extends CrudRepository<Dog, Integer> {
-
 
     // NOTE: don't need to implement .findAll()
 

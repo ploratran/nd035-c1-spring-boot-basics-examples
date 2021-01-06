@@ -7,48 +7,48 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+// @RestController combines @Controller and @ResponseBody:
 @RestController
 public class DogController {
-    // use DogService:
+
+    // defines field to use Service layer:
     private DogService dogService;
 
+    // auto wired Dog Service:
     @Autowired
-    // auto wired a dog service bean:
     public void setDogService(DogService dogService) {
         this.dogService = dogService;
     }
 
-    // retrieve all dogs:
+    // get all dogs:
     @GetMapping("/dogs")
     public ResponseEntity<List<Dog>> getAllDogs() {
-        List<Dog> list = dogService.retrieveDogs();
+        List<Dog> list = this.dogService.retrieveAllDogs();
         return new ResponseEntity<List<Dog>>(list, HttpStatus.OK);
     }
 
-    // retrieve list of dog breeds:
-    @GetMapping("/dogs/breed")
+    // get all dog breeds:
+    @GetMapping("/dogs/breeds")
     public ResponseEntity<List<String>> getAllBreeds() {
-        List<String> list = dogService.retrieveDogBreed();
+        List<String> list = this.dogService.retrieveDogBreeds();
         return new ResponseEntity<List<String>>(list, HttpStatus.OK);
-
     }
 
-    // retrieve list of dog breeds by id:
+    // get a dog by its id:
     @GetMapping("/dogs/{id}/breed")
-    public ResponseEntity<String> getDogBreedById(@PathVariable("id") Long id) {
-        String breed = dogService.retrieveDogBreedById(id);
-        return new ResponseEntity<String>(breed, HttpStatus.OK);
+    public ResponseEntity<String> getDogBreedById(@PathVariable("id") int id) {
+        String dog = this.dogService.retrieveDogBreedById(id);
+        return new ResponseEntity<String>(dog, HttpStatus.OK);
     }
 
-    // retrieve list of dog names:
-    @GetMapping("/allNames")
-    public ResponseEntity<List<String>> getAllNames() {
-        List<String> list = dogService.retrieveDogNames();
+    // get all dog names:
+    public ResponseEntity<List<String>> getAllDogNames() {
+        List<String> list = this.dogService.retrieveDogNames();
         return new ResponseEntity<List<String>>(list, HttpStatus.OK);
     }
-
 }

@@ -32,6 +32,9 @@ public class Dog {
         this.breed = breed;
     }
 
+    // make default constructor for .findAll() CrudRepository:
+    public Dog() {}
+
     // getters and setters:
     public Integer getId() {
         return id;
