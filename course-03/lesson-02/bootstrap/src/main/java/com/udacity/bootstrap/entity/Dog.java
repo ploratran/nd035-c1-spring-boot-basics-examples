@@ -26,8 +26,13 @@ public class Dog {
         this.origin = origin;
     }
 
-    // getters and setters:
+    // constructor to initialize object for name and breed:
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
+    }
 
+    // getters and setters:
     public Integer getId() {
         return id;
     }

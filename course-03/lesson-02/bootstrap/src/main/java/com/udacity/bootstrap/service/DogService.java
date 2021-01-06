@@ -7,14 +7,14 @@ import java.util.List;
 public interface DogService {
 
     // retrieve all dogs:
-    List<Dog> retrieveDogs();
+    List<Dog> retrieveAllDogs();
 
     // retrieve a dog breed:
-    List<Dog> retrieveDogBreed();
+    List<String> retrieveDogBreeds();
 
     // retrieve a dog breed by its id:
-    String retrieveDogBreedById();
+    String retrieveDogBreedById(int id);
 
     // retrieve all dog names:
-    List<Dog> retrieveDogNames();
+    List<String> retrieveDogNames();
 }

@@ -15,26 +15,27 @@ import java.util.Optional;
 @Service
 public class DogServiceImpl implements DogService {
 
-    // auto wiring a dog repository bean
+    // auto wired repository to use for service:
     @Autowired
     DogRepository dogRepository;
 
-    public List<Dog> retrieveDogs() {
-        return (List<Dog>) dogRepository.findAll();
+    // method to find all dogs:
+    public List<Dog> retrieveAllDogs() {
+        return (List<Dog>) this.dogRepository.findAll();
     }
 
-    public List<String> retrieveDogBreed() {
-        return (List<String>) dogRepository.findAllBreed();
+    // method to find all dog breeds:
+    public List<String> retrieveDogBreeds() {
+        return (List<String>) this.dogRepository.findDogBreeds();
     }
 
-    public String retrieveDogBreedById(Long id) {
-        //
-        Optional<String> optionalBreed = Optional.ofNullable(dogRepository.findDogBreedById(id));
-        String breed = optionalBreed.orElseThrow(DogNotFoundException::new);
-        return breed;
+    // method to find dog breed by its id:
+    public String retrieveDogBreedById(int id) {
+        return this.dogRepository.findDogById(id);
     }
 
+    // method to find all dog names:
     public List<String> retrieveDogNames() {
-        return (List<String>) dogRepository.findDogNames();
+        return (List<String>) this.dogRepository.findDogNames();
     }
 }
