@@ -6,20 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-
 public class Dog {
 
     // attributes / fields:
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     private String name;
     private String breed;
     private String origin;
 
     // constructor:
-    public Dog(int id, String name, String breed, String origin) {
+    public Dog(Long id, String name, String breed, String origin) {
         this.id = id;
         this.name = name;
         this.breed = breed;
@@ -36,11 +35,11 @@ public class Dog {
     public Dog() {}
 
     // getters and setters:
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

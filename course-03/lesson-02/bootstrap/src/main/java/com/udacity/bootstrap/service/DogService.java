@@ -13,7 +13,7 @@ public interface DogService {
     List<String> retrieveDogBreeds();
 
     // retrieve a dog breed by its id:
-    String retrieveDogBreedById(int id);
+    String retrieveDogBreedById(Long id);
 
     // retrieve all dog names:
     List<String> retrieveDogNames();

@@ -40,9 +40,9 @@ public class DogController {
 
     // get a dog by its id:
     @GetMapping("/dogs/{id}/breed")
-    public ResponseEntity<String> getDogBreedById(@PathVariable("id") int id) {
-        String dog = this.dogService.retrieveDogBreedById(id);
-        return new ResponseEntity<String>(dog, HttpStatus.OK);
+    public ResponseEntity<String> getDogBreedById(@PathVariable Long id) {
+        String breed = this.dogService.retrieveDogBreedById(id);
+        return new ResponseEntity<String>(breed, HttpStatus.OK);
     }
 
     @GetMapping("/dogs/names")

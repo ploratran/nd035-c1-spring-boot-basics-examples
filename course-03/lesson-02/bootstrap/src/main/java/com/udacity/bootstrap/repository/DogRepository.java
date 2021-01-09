@@ -17,7 +17,7 @@ import java.util.List;
 // CrudRepository<Dog, Long>
     // Dog: class name to create the Repository
     // Integer: data type of the primary key of the Repository class (Dog class)
-public interface DogRepository extends CrudRepository<Dog, Integer> {
+public interface DogRepository extends CrudRepository<Dog, Long> {
 
     // NOTE: don't need to implement .findAll()
 
@@ -27,7 +27,7 @@ public interface DogRepository extends CrudRepository<Dog, Integer> {
 
     // find a dog by its id:
     @Query("select d.id, d.breed from Dog d where d.id=:id")
-    String findDogById(int id);
+    String findDogById(Long id);
 
     // find all dog names:
     @Query("select d.id, d.name from Dog d")

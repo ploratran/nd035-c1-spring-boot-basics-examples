@@ -30,19 +30,11 @@ public class DogServiceImpl implements DogService {
     }
 
     // method to find dog breed by its id:
-    public String retrieveDogBreedById(int id) {
+    public String retrieveDogBreedById(Long id) {
         Optional<String> optionalBreed = Optional.ofNullable(dogRepository.findDogById(id));
         String breed = optionalBreed.orElseThrow(DogNotFoundException::new);
         return breed;
     }
-//    public String retrieveDogBreedById(int id) {
-//        // use Option to get the resulting Dog object
-//        // if Dog does not exist, throw DogNotFoundException:
-//        Optional<String> optionalBreed = Optional.ofNullable(this.dogRepository.findDogById(id));
-//        String breed = optionalBreed.orElseThrow(DogNotFoundException::new);
-//        return breed;
-////        return this.dogRepository.findDogById(id);
-//    }
 
     // method to find all dog names:
     public List<String> retrieveDogNames() {
