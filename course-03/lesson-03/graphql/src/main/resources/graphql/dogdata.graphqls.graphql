@@ -1,0 +1,29 @@
+# Schema for Dog that matches fields in Dog entity:
+type Dog {
+    id: ID!
+    name: String!
+    breed: String!
+    origin: String!
+}
+
+# define Root Query:
+# Add the following query operations:
+# findDogBreeds
+# findDogBreedById
+# findAllDogNames
+type Query {
+    findAllDogs: [Dog]!
+    findDogById(id:ID!): Dog!
+#    findDogBreeds(breed: String!) : [Dog]!
+#    findDogBreedById(id: ID!, breed: String!): Dog!
+#    findAllDogNames(name: String!): [Dog]!
+}
+
+# define Root Mutation:
+# Add the following mutators:
+# deleteDogBreed
+# updateDogName
+type Mutation {
+    deleteDogBreed(breed:String!): Boolean
+    updateDogName(id:ID!, newName:String!): Dog!
+}
