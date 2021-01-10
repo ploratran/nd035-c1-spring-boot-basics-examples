@@ -1,12 +1,11 @@
 package com.udacity.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.udacity.graphql.Entity.Dog;
-import com.udacity.graphql.Repository.DogRepository;
+import com.udacity.graphql.entity.Dog;
+import com.udacity.graphql.repository.DogRepository;
 import com.udacity.graphql.exception.DogNotFoundException;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
 import java.util.Optional;
 
 // tells Spring to identify this class as a Component:

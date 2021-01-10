@@ -1,4 +1,4 @@
-package com.udacity.graphql.Entity;
+package com.udacity.graphql.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

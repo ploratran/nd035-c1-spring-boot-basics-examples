@@ -1,8 +1,8 @@
 package com.udacity.graphql.mutator;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.udacity.graphql.Entity.Dog;
-import com.udacity.graphql.Repository.DogRepository;
+import com.udacity.graphql.entity.Dog;
+import com.udacity.graphql.repository.DogRepository;
 import com.udacity.graphql.exception.BreedNotFoundException;
 import com.udacity.graphql.exception.DogNotFoundException;
 import org.springframework.stereotype.Component;
