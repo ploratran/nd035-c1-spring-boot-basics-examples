@@ -1,37 +1,38 @@
 package com.udacity.dogmicroservice.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Dog {
 
     // define fields/attributes:
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    Long id;
+    private Long id;
 
-    String name;
-    String breed;
-    String origin;
+    private String name;
+    private String breed;
+    private String origin;
 
     // constructors:
     public Dog() {}
 
-    public Dog(String name, Long id) {
+    public Dog(String name, String breed) {
         this.name = name;
-        this.id = id;
+        this.breed = breed;
     }
 
-    public Dog(String name, String breed, String origin, Long id) {
+    public Dog(Long id, String name, String breed, String origin) {
+        this.id = id;
         this.name = name;
         this.breed = breed;
         this.origin = origin;
-        this.id = id;
     }
 
     // getters and setters:
-
     public Long getId() {
         return id;
     }
