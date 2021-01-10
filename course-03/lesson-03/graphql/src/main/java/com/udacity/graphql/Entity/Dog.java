@@ -7,7 +7,8 @@ import javax.persistence.Id;
 public class Dog {
     // define attributes/fields:
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String name;
     private String breed;
@@ -23,14 +24,8 @@ public class Dog {
         this.origin = origin;
     }
 
-    public Dog(Long id, String name) {
+    public Dog(String name, Long id) {
         this.id = id;
-        this.name = name;
-    }
-
-    public Dog(Long id, String name, String breed) {
-        this.id = id;
-        this.breed = breed;
         this.name = name;
     }
 
