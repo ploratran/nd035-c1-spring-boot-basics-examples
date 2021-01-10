@@ -8,27 +8,20 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-// tells Spring to identify this class as a Component:
 @Component
 public class Query implements GraphQLQueryResolver {
-
-    // wire Repository:
     private DogRepository dogRepository;
 
-    // constructor:
     public Query(DogRepository dogRepository) {
         this.dogRepository = dogRepository;
     }
 
-    // map the Root Query findAllDogs inside .graphqls:
     public Iterable<Dog> findAllDogs() {
-        return this.dogRepository.findAll();
+        return dogRepository.findAll();
     }
 
-    // map Root Query findDogById():
     public Dog findDogById(Long id) {
-        Optional<Dog> optionalDog = this.dogRepository.findById(id);
-
+        Optional<Dog> optionalDog = dogRepository.findById(id);
         if (optionalDog.isPresent()) {
             return optionalDog.get();
         } else {
@@ -36,3 +29,32 @@ public class Query implements GraphQLQueryResolver {
         }
     }
 }
+
+// tells Spring to identify this class as a Component:
+//@Component
+//public class Query implements GraphQLQueryResolver {
+//
+//    // wire Repository:
+//    private DogRepository dogRepository;
+//
+//    // constructor:
+//    public Query(DogRepository dogRepository) {
+//        this.dogRepository = dogRepository;
+//    }
+//
+//    // map the Root Query findAllDogs inside .graphqls:
+//    public Iterable<Dog> findAllDogs() {
+//        return this.dogRepository.findAll();
+//    }
+//
+//    // map Root Query findDogById():
+//    public Dog findDogById(Long id) {
+//        Optional<Dog> optionalDog = this.dogRepository.findById(id);
+//
+//        if (optionalDog.isPresent()) {
+//            return optionalDog.get();
+//        } else {
+//            throw new DogNotFoundException("Dog Not Found", id);
+//        }
+//    }
+//}

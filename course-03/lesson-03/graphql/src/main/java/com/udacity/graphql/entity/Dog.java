@@ -1,9 +1,11 @@
 package com.udacity.graphql.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Dog {
     // define attributes/fields:
     @Id

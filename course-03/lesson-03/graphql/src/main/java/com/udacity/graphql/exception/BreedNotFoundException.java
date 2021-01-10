@@ -24,6 +24,11 @@ public class BreedNotFoundException extends RuntimeException implements GraphQLE
     }
 
     @Override
+    public Map<String, Object> getExtensions() {
+        return extensions;
+    }
+
+    @Override
     public ErrorType getErrorType() {
         return null;
     }

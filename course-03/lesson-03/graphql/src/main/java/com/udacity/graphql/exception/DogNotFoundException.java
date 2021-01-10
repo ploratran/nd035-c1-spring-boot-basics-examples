@@ -32,6 +32,11 @@ public class DogNotFoundException extends RuntimeException implements GraphQLErr
     }
 
     @Override
+    public Map<String, Object> getExtensions() {
+        return extensions;
+    }
+
+    @Override
     public ErrorType getErrorType() {
         return null;
     }
