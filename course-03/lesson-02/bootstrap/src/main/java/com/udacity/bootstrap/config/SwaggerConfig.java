@@ -18,12 +18,12 @@ public class SwaggerConfig {
     // integrate Swagger into existing Spring Boot project:
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
+        return new Docket(DocumentationType.SWAGGER_2) // says that documentation type is Swagger
+                .select() // returns an instance of API selector builder controls endpoints exposed by Swagger
+                .apis(RequestHandlerSelectors.any()) // allows documentation available for entire API
+                .paths(PathSelectors.any()) // for both Request Handlers and Past Selectors
                 .build()
-                .useDefaultResponseMessages(false);
+                .useDefaultResponseMessages(false); // turn off default response messages
     }
 
     // apiInfo methods allow developers to customize some default values:

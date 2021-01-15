@@ -2,6 +2,8 @@ package com.udacity.bootstrap.web;
 
 import com.udacity.bootstrap.entity.Dog;
 import com.udacity.bootstrap.service.DogService;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-// @RestController combines @Controller and @ResponseBody:
-@RestController
+@RestController // @RestController combines @Controller and @ResponseBody
+// @ApiResponses allows to customize response messages:
+@ApiResponses(value = {
+        // @ApiResponse defines each error message for each code:
+        @ApiResponse(code=400, message = "This is a bad request."),
+        @ApiResponse(code=401, message="Your access request cannot be authorized."),
+        @ApiResponse(code=404, message="This dog is not found."),
+        @ApiResponse(code=500, message = "The server is down.")
+})
 public class DogController {
 
     // defines field to use Service layer:
