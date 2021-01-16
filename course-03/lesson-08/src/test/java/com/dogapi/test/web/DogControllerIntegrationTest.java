@@ -17,9 +17,9 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
+@RunWith(SpringRunner.class) // defines Spring Runner class to run test cases
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // used for integration testing with random server port
+@AutoConfigureMockMvc // inject Spring MockMvc. Simulate calling code from client same way as processing real HTTP request
 public class DogControllerIntegrationTest {
     // define server random port:
     @LocalServerPort
