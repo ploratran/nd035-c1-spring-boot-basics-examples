@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -26,6 +27,7 @@ public class DogControllerUnitTest {
     DogService dogService;
 
     @Test
+    @WithMockUser
     public void getAllDogs() throws Exception {
         this.mockMvc.perform(get("/dogs"))
                 .andExpect(status().isOk())
@@ -36,8 +38,9 @@ public class DogControllerUnitTest {
     }
 
     @Test
+    @WithMockUser
     public void getADog() throws Exception {
-        this.mockMvc.perform(get("/dogs/1"))
+        this.mockMvc.perform(get("/dogs/1/breed"))
                 .andExpect(status().isOk());
 
         verify(this.dogService, times(1)).retrieveDogBreedById(1L);
