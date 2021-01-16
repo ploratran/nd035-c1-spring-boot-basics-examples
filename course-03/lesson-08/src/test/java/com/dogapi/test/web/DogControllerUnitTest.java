@@ -34,4 +34,12 @@ public class DogControllerUnitTest {
 
         verify(this.dogService, times(1)).retrieveAllDogs();
     }
+
+    @Test
+    public void getADog() throws Exception {
+        this.mockMvc.perform(get("/dogs/1"))
+                .andExpect(status().isOk());
+
+        verify(this.dogService, times(1)).retrieveDogBreedById(1L);
+    }
 }
