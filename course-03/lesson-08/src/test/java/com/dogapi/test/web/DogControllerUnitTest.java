@@ -13,6 +13,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -27,9 +29,10 @@ public class DogControllerUnitTest {
     DogService dogService;
 
     @Test
-    @WithMockUser
+//    @WithMockUser
     public void getAllDogs() throws Exception {
-        this.mockMvc.perform(get("/dogs"))
+        this.mockMvc.perform(get("/dogs")
+                .with(user("admin").password("password").roles("USER","ADMIN")))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(content().json("[]"));
