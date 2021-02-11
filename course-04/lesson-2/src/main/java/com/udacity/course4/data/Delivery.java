@@ -4,9 +4,8 @@ import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.List;
 
 // A Delivery you will make
 @Entity
@@ -18,12 +17,23 @@ public class Delivery {
 
     @Nationalized
     private String name;
+
     @Column(name="address_full", length=500)
     private String address;
-    private LocalDateTime deliveryDate; // includes both date and time
+
+    private LocalDateTime deliveryDate; // type LocalDateTime includes both date and time
 
     @Type(type="yes_no")
     private Boolean isDelivered;
+
+    /**
+     * Modify Delivery so that it includes a list of all the Flowers and Shrubs
+     * to be included in the delivery. Make this association bidirectional,
+     * and store the association in the ‘plant’ table in a column called ‘delivery_id’.
+     * */
+    @OneToMany(mappedBy="delivery")
+    // @JoinColumn(name="delivery_id")
+    private List<Plant> plants;
 
     public Delivery() {}
 
@@ -58,7 +68,6 @@ public class Delivery {
     public void setDeliveryDate(LocalDateTime deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
-
 
     public Boolean isDelivered() {
         return isDelivered;
