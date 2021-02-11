@@ -3,9 +3,9 @@ package com.udacity.course4.data;
 import javax.persistence.*;
 
 // Turn Flower into a subclass of Plant that just has the attribute color:
-// Flowers should have separate tables for their unique fields
+// Flowers should have separate tables for their unique fields (JOINED):
 @Entity
-public class Flower extends Plant{
+public class Flower extends Plant {
 
     private String color;
 

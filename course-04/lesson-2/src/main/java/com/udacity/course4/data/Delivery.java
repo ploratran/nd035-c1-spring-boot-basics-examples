@@ -31,8 +31,7 @@ public class Delivery {
      * to be included in the delivery. Make this association bidirectional,
      * and store the association in the ‘plant’ table in a column called ‘delivery_id’.
      * */
-    @OneToMany(mappedBy="delivery")
-    // @JoinColumn(name="delivery_id")
+    @OneToMany(mappedBy="delivery") // use mappedBy on the containing Entity side, usually for @OneToMany
     private List<Plant> plants;
 
     public Delivery() {}

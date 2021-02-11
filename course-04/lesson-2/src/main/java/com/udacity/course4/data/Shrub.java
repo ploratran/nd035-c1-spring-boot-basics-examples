@@ -4,7 +4,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 
 // Create a new class called Shrub and add attributes for height and width:
-// Shrubs should have separate tables for their unique fields:
+// Shrubs should have separate tables for their unique fields (JOINED):
 @Entity
 public class Shrub extends Plant {
 
