@@ -9,6 +9,7 @@ public class Flower extends Plant {
 
     private String color;
 
+    // Entity must provide a public no-arg constructor:
     public Flower() {}
 
     public String getColor() {

@@ -11,6 +11,7 @@ public class Shrub extends Plant {
     private Double height;
     private Double width;
 
+    // Entity must provide a public no-arg constructor:
     public Shrub() {}
 
     public Double getHeight() {

@@ -1,5 +1,7 @@
 package com.udacity.course4.data;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.udacity.course4.controller.Views;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -15,9 +17,12 @@ public class Plant {
     @GeneratedValue
     private Long id;
 
+    /** 2 fields: "name" and "price" are selected: */
+    @JsonView(Views.Public.class)
     @Nationalized
     private String name;
 
+    @JsonView(Views.Public.class)
     @Column(precision=12, scale=4)
     private BigDecimal price;
 
@@ -26,7 +31,7 @@ public class Plant {
      * store it in the "plant" table in a column called "delivery_id"
      * */
     @ManyToOne // many plants can belong to one delivery
-    @JoinColumn(name="delivery_id") // map the join column in the plant table
+    @JoinColumn(name="delivery_id") // map the join column in the plant table (foreign key)
     private Delivery delivery;
 
     public Plant() {}
