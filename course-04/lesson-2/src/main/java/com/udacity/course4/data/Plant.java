@@ -19,7 +19,7 @@ public class Plant {
 
     /** 2 fields: "name" and "price" are selected: */
     @JsonView(Views.Public.class)
-    @Nationalized
+    @Nationalized // similar to UTF-8
     private String name;
 
     @JsonView(Views.Public.class)
@@ -30,7 +30,8 @@ public class Plant {
      * Establish a bidirectional relationship between Delivery and
      * store it in the "plant" table in a column called "delivery_id"
      * */
-    @ManyToOne // many plants can belong to one delivery
+    // use FetchType.LAZY so that plant won't query Delivery objects until they're referenced:
+    @ManyToOne(fetch = FetchType.LAZY) // many plants can belong to one delivery
     @JoinColumn(name="delivery_id") // map the join column in the plant table (foreign key)
     private Delivery delivery;
 

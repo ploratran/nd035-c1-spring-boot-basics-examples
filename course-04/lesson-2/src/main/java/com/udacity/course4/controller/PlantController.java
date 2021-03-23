@@ -18,10 +18,12 @@ public class PlantController {
     @Autowired
     private PlantService plantService;
 
-    @GetMapping
     // method that return a PlantDTO that includes only the name and price:
+    @GetMapping
     public PlantDTO getPlantDTO(String name){
+        // use Plant Service to get Plant Entity by its name:
         Plant plant = this.plantService.getPlantByName(name);
+        // return the converted Plant DTO using convertEntityToDTO():
         return convertEntityToDTO(plant);
     }
 
@@ -33,8 +35,10 @@ public class PlantController {
         return this.plantService.getPlantByName(name);
     }
 
-    // a method to convert the Plant Entity into a PlantDTO:
+    // a method to convert the Plant Entity into a PlantDTO
+    // return a Plant DTO:
     private static PlantDTO convertEntityToDTO(Plant plant) {
+        // initialize a Plant DTO object:
         PlantDTO plantDTO = new PlantDTO();
         // use BeanUtils to copy properties of Entity to DTO:
         BeanUtils.copyProperties(plant, plantDTO);

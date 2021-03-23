@@ -15,7 +15,7 @@ public class Delivery {
     @GeneratedValue
     private Long id;
 
-    @Nationalized
+    @Nationalized // similar to UTF-8
     private String name;
 
     @Column(name="address_full", length=500)
@@ -31,7 +31,9 @@ public class Delivery {
      * to be included in the delivery. Make this association bidirectional,
      * and store the association in the ‘plant’ table in a column called ‘delivery_id’.
      * */
-    @OneToMany(mappedBy="delivery") // use mappedBy on the containing Entity side, usually for @OneToMany
+    // use "mappedBy" on the containing Entity side, usually for @OneToMany
+    // use "CascadeType.REMOVE" to delete any associated Plants when removed:
+    @OneToMany(mappedBy="delivery", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<Plant> plants;
 
     public Delivery() {}
