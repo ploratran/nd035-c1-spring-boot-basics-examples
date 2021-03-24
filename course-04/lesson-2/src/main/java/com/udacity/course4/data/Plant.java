@@ -60,4 +60,8 @@ public class Plant {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+    }
 }

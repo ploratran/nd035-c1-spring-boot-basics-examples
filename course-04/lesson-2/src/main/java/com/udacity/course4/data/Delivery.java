@@ -33,7 +33,7 @@ public class Delivery {
      * */
     // use "mappedBy" on the containing Entity side, usually for @OneToMany
     // use "CascadeType.REMOVE" to delete any associated Plants when removed:
-    @OneToMany(mappedBy="delivery", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="delivery", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Plant> plants;
 
     public Delivery() {}
@@ -76,5 +76,9 @@ public class Delivery {
 
     public void setDelivered(Boolean delivered) {
         isDelivered = delivered;
+    }
+
+    public List<Plant> getPlants() {
+        return (List<Plant>) new Plant();
     }
 }
