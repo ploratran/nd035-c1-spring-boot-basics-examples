@@ -7,6 +7,13 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+// Named Query that returns a list of all Deliveries for a specified name:
+// It should accept a String name and return a list of Delivery Entities:
+@NamedQuery(
+        name = "Delivery.findAllDeliveries",
+        query = "select d from Delivery d where d.name = :name"
+)
+
 // A Delivery you will make
 @Entity
 public class Delivery {
