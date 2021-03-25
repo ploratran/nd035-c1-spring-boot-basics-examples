@@ -66,6 +66,13 @@ public class DeliveryRepository {
         Root<Plant> root = query.from(Plant.class);
 
         // build a query from Criteria object:
+        query.select(
+                cb.construct(
+                        RecipientAndPrice.class,
+                        root.get("delivery").get("name"),
+                        cb.sum(root.get("price"))
+                )
+        ).where(cb.equal(root.get("delivery").get("id"), id));
 
         // return result as a single result:
         return entityManager.createQuery(query).getSingleResult();
