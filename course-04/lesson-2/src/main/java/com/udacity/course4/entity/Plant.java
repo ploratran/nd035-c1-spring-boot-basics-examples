@@ -1,4 +1,4 @@
-package com.udacity.course4.data;
+package com.udacity.course4.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.udacity.course4.controller.Views;

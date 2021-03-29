@@ -1,4 +1,4 @@
-package com.udacity.course4.data;
+package com.udacity.course4.entity;
 
 import javax.persistence.*;
 

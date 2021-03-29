@@ -1,7 +1,7 @@
 package com.udacity.course4.repository;
 
-import com.udacity.course4.data.Delivery;
-import com.udacity.course4.data.Plant;
+import com.udacity.course4.entity.Delivery;
+import com.udacity.course4.entity.Plant;
 import com.udacity.course4.projection.RecipientAndPrice;
 import org.springframework.stereotype.Repository;
 
@@ -59,22 +59,27 @@ public class DeliveryRepository {
     // that contains the name of the delivery recipient and the sum of the prices of plants in their order:
     public RecipientAndPrice getBill(Long id) {
         // create a Criteria to query using Java:
-        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         // create query to return RecipientAndPrice object:
-        CriteriaQuery<RecipientAndPrice> query = cb.createQuery(RecipientAndPrice.class);
+        CriteriaQuery<RecipientAndPrice> query = builder.createQuery(RecipientAndPrice.class);
         // set root from Plant class:
         Root<Plant> root = query.from(Plant.class);
 
         // build a query from Criteria object:
+        // returns a RecipientAndPrice that contains
+        // name of the delivery recipient
+        // sum of the prices of plants in their order:
+        // https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#criteria-typedquery-wrapper
+        // Wrap multiple values into RecipientAndPrice class, rather than RecipientAndPrice#name, RecipientAndPrice#price:
         query.select(
-                cb.construct(
+                builder.construct(
                         RecipientAndPrice.class,
                         root.get("delivery").get("name"),
-                        cb.sum(root.get("price"))
+                        builder.sum(root.get("price"))
                 )
-        ).where(cb.equal(root.get("delivery").get("id"), id));
+        ).where(builder.equal(root.get("delivery").get("id"), id));
 
-        // return result as a single result:
+        // return result as a single result of a RecipientAndPrice object:
         return entityManager.createQuery(query).getSingleResult();
     }
 }

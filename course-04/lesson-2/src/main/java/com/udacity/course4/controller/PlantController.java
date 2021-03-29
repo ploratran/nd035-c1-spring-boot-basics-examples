@@ -1,7 +1,7 @@
 package com.udacity.course4.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.udacity.course4.data.Plant;
+import com.udacity.course4.entity.Plant;
 import com.udacity.course4.dto.PlantDTO;
 import com.udacity.course4.service.PlantService;
 import org.springframework.beans.BeanUtils;
@@ -19,7 +19,7 @@ public class PlantController {
     private PlantService plantService;
 
     // method that return a PlantDTO that includes only the name and price:
-    @GetMapping
+    @GetMapping("/dto")
     public PlantDTO getPlantDTO(String name){
         // use Plant Service to get Plant Entity by its name:
         Plant plant = this.plantService.getPlantByName(name);

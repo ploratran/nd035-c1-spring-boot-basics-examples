@@ -1,6 +1,5 @@
-package com.udacity.course4.data;
+package com.udacity.course4.entity;
 
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 
 // Create a new class called Shrub and add attributes for height and width:

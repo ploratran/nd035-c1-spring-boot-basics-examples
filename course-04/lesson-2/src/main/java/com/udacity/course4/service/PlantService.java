@@ -1,6 +1,6 @@
 package com.udacity.course4.service;
 
-import com.udacity.course4.data.Plant;
+import com.udacity.course4.entity.Plant;
 import org.springframework.stereotype.Service;
 
 // a Plant Service that returns a Plant instance:

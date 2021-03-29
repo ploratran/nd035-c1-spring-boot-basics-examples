@@ -1,4 +1,4 @@
-package com.udacity.course4.data;
+package com.udacity.course4.entity;
 
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Type;

@@ -1,6 +1,6 @@
 package com.udacity.course4.service;
 
-import com.udacity.course4.data.Delivery;
+import com.udacity.course4.entity.Delivery;
 import com.udacity.course4.projection.RecipientAndPrice;
 import com.udacity.course4.repository.DeliveryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
