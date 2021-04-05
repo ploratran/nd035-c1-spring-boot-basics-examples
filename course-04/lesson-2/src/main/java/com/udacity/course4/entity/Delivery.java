@@ -85,7 +85,12 @@ public class Delivery {
         isDelivered = delivered;
     }
 
+    // getter and setter for new plants:
     public List<Plant> getPlants() {
-        return (List<Plant>) new Plant();
+        return this.plants;
+    }
+
+    public void setPlants(List<Plant> newPlants) {
+        this.plants = newPlants;
     }
 }

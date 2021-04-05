@@ -7,8 +7,12 @@ import com.udacity.course4.service.PlantService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 // Translation between DTO and Entity happens inside the Controller:
 @RestController
@@ -43,5 +47,17 @@ public class PlantController {
         // use BeanUtils to copy properties of Entity to DTO:
         BeanUtils.copyProperties(plant, plantDTO);
         return plantDTO;
+    }
+
+    // a method to get plant by id if it is delivered:
+    @GetMapping("/delivered/{id}")
+    public Boolean delivered(@PathVariable Long plantId) {
+        return this.plantService.delivered(plantId);
+    }
+
+    // a method to get a list of plants that are cheaper than a specified price:
+    @GetMapping("/price-under/{price}")
+    public List<Plant> plantsCheaperThan(@PathVariable BigDecimal price) {
+        return this.plantService.findPriceLessThan(price);
     }
 }
