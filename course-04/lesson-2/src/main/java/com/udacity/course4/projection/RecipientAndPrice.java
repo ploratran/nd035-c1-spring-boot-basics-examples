@@ -2,7 +2,7 @@ package com.udacity.course4.projection;
 
 import java.math.BigDecimal;
 
-// this is a Projection class since it's not an Entity class
+// this is a Projection class of the Plant entity since it's not an Entity class
 public class RecipientAndPrice {
     private String name;
     private BigDecimal price;

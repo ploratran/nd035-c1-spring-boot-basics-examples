@@ -10,12 +10,15 @@ import java.util.List;
 
 @Repository
 public interface PlantRepository extends JpaRepository<Plant, Long> {
-    // find out if a specific plant has been delivered
+    // 1. Save a new Plant and return its Id:
+    // use the default .save() of JpaRepository so no need to implement
+
+    // 2. Check if a plant has been delivered
     // should take a Long plantId and return a Boolean:
     @Query("select p.delivery.isDelivered from Plant p where p.id = :plantId")
     Boolean deliveryCompleted(Long plantId);
 
-    // returns all the plants cheaper than the specified price
+    // 3. Find a list of plants cheaper than a specified amount
     // should take a BigDecimal price and return a List of Plants:
     // can use method name with LessThan
     // Reference: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference

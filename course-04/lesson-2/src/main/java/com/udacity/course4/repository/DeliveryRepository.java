@@ -61,6 +61,7 @@ public class DeliveryRepository {
         // create a Criteria to query using Java:
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         // create query to return RecipientAndPrice object:
+        // uses CriteriaBuilder to populate an instance of the RecipientAndPrice class:
         CriteriaQuery<RecipientAndPrice> query = builder.createQuery(RecipientAndPrice.class);
         // set root from Plant class:
         Root<Plant> root = query.from(Plant.class);

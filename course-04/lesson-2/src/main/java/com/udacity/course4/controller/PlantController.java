@@ -6,10 +6,7 @@ import com.udacity.course4.dto.PlantDTO;
 import com.udacity.course4.service.PlantService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -49,6 +46,11 @@ public class PlantController {
         return plantDTO;
     }
 
+    @PostMapping
+    public Long newPlant(Plant plant){
+        return this.plantService.save(plant);
+    }
+
     // a method to get plant by id if it is delivered:
     @GetMapping("/delivered/{id}")
     public Boolean delivered(@PathVariable Long plantId) {
@@ -58,6 +60,6 @@ public class PlantController {
     // a method to get a list of plants that are cheaper than a specified price:
     @GetMapping("/price-under/{price}")
     public List<Plant> plantsCheaperThan(@PathVariable BigDecimal price) {
-        return this.plantService.findPriceLessThan(price);
+        return this.plantService.findPlantsBelowPrice(price);
     }
 }

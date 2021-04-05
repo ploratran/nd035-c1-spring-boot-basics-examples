@@ -16,8 +16,13 @@ public class DeliveryService {
     }
 
     public Long save(Delivery delivery) {
+        // Relationship of Delivery to Plants is 1:M
+        // iterate through each plant in a delivery
+        // set delivery for each plant:
         delivery.getPlants().forEach(plant -> plant.setDelivery(delivery));
+        // save delivery:
         deliveryRepository.persist(delivery);
+        // return the saved delivery's id:
         return delivery.getId();
     }
 }

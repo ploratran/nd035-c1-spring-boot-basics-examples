@@ -31,7 +31,7 @@ public class PlantService {
         return plantRepository.deliveryCompleted(plantId);
     }
     // 3. Find a list of plants cheaper than a specified amount
-    public List<Plant> findPriceLessThan(BigDecimal price) {
+    public List<Plant> findPlantsBelowPrice(BigDecimal price) {
         return plantRepository.findByPriceLessThan(price);
     }
 }
