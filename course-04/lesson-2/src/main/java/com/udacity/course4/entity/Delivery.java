@@ -45,6 +45,12 @@ public class Delivery {
 
     public Delivery() {}
 
+    public Delivery(String name, String address, LocalDateTime deliveryDate) {
+        this.name = name;
+        this.address = address;
+        this.deliveryDate = deliveryDate;
+    }
+
     public Long getId() {
         return id;
     }

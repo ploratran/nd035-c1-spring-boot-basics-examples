@@ -37,6 +37,11 @@ public class Plant {
 
     public Plant() {}
 
+    public Plant(String name, double price) {
+        this.name = name;
+        this.price = BigDecimal.valueOf(price);
+    }
+
     public Long getId() {
         return id;
     }
