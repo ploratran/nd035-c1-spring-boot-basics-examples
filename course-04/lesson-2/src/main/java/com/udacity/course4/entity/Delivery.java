@@ -31,7 +31,7 @@ public class Delivery {
     private LocalDateTime deliveryDate; // type LocalDateTime includes both date and time
 
     @Type(type="yes_no")
-    private Boolean isDelivered;
+    private Boolean isDelivered = false;
 
     /**
      * Modify Delivery so that it includes a list of all the Flowers and Shrubs
