@@ -31,7 +31,7 @@ public class Delivery {
     private LocalDateTime deliveryDate; // type LocalDateTime includes both date and time
 
     @Type(type="yes_no")
-    private Boolean isDelivered = false;
+    private Boolean isDelivered;
 
     /**
      * Modify Delivery so that it includes a list of all the Flowers and Shrubs
@@ -45,10 +45,11 @@ public class Delivery {
 
     public Delivery() {}
 
-    public Delivery(String name, String address, LocalDateTime deliveryDate) {
+    public Delivery(String name, String address, LocalDateTime deliveryDate, Boolean isDelivered) {
         this.name = name;
         this.address = address;
         this.deliveryDate = deliveryDate;
+        this.isDelivered = isDelivered;
     }
 
     public Long getId() {

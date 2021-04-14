@@ -46,13 +46,20 @@ class Course4ApplicationTests {
 	public void testDeliveryCompleted() {
 		// create a new Plant and new Delivery:
 		Plant plant1 = manager.persist(new Plant("White Rose", 10.99));
-		Delivery delivery = manager.persist(new Delivery("White Rose", "724 2ND LN", LocalDateTime.now()));
+		Delivery delivery1 = manager.persist(new Delivery("White Rose", "724 2ND LN", LocalDateTime.now(), true));
+
+		Plant plant2 = manager.persist(new Plant("Forget Me Not", 15.99));
+		Delivery delivery2 = manager.persist(new Delivery("Forget Me Not", "415 Delano Ave", LocalDateTime.now(), false));
 
 		// set both sides of their bi-directional relationship:
-		delivery.setPlants(Lists.newArrayList(plant1));
-		plant1.setDelivery(delivery);
+		delivery1.setPlants(Lists.newArrayList(plant1));
+		plant1.setDelivery(delivery1);
+
+		delivery2.setPlants(Lists.newArrayList(plant2));
+		plant2.setDelivery(delivery2);
 
 		// verify that PlantRepository.deliveryCompleted returns false for the plant just created:
-		Assertions.assertFalse(this.repository.deliveryCompleted(plant1.getId()));
+		Assertions.assertTrue(this.repository.deliveryCompleted(plant1.getId()));
+		Assertions.assertFalse(this.repository.deliveryCompleted(plant2.getId()));
 	}
 }
